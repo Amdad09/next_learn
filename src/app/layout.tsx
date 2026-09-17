@@ -21,15 +21,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body>
-        <Navbar/>
-        {children}
-        <Footer/>
-      </body>
-    </html>
+      <html
+          lang="en"
+          className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      >
+          <body>
+              <Navbar />
+              <div className="bg-slate-950"> {children}</div>
+
+              <Footer />
+          </body>
+      </html>
   );
 }

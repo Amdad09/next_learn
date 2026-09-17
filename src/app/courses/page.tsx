@@ -1,4 +1,5 @@
 import CourseCard from "@/components/CourseCard";
+import type { Metadata } from "next";
 const courses = [
     {
         title: 'React',
@@ -16,6 +17,12 @@ const courses = [
         level: 'Intermediate',
     },
 ];
+
+export const metadata: Metadata = {
+    title: 'Courses List',
+    description: 'Best courses in here',
+};
+
 const CoursesPage = () => {
   return (
       <div className="grid md:grid-cols-3 gap-4 mt-10">
